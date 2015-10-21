@@ -23,27 +23,40 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         foreground.delegate = self
+        
+        
+        let widthConstraint = NSLayoutConstraint(item:self.contentView,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self.view,
+            attribute: NSLayoutAttribute.Width,
+            multiplier:1.0,
+            constant:0
+        );
+        
+        self.view.addConstraint(widthConstraint);
+        
         let leftConstraint = NSLayoutConstraint(item:self.contentView,
-            attribute: NSLayoutAttribute.Leading,
+            attribute: NSLayoutAttribute.Left,
             relatedBy:NSLayoutRelation.init(rawValue: 0)!,
             toItem:self.view,
-            attribute: NSLayoutAttribute.Leading,
+            attribute: NSLayoutAttribute.Left,
             multiplier:1.0,
             constant:0
         );
         
         self.view.addConstraint(leftConstraint);
-//
-//        let rightConstraint = NSLayoutConstraint(item:self.contentView,
-//            attribute:NSLayoutAttribute.Trailing,
-//            relatedBy:NSLayoutRelation.init(rawValue: 0)!,
-//            toItem:self.view,
-//            attribute: NSLayoutAttribute.Trailing,
-//            multiplier:1.0,
-//            constant:0
-//        );
-//        
-//        self.view.addConstraint(rightConstraint);
+
+        let rightConstraint = NSLayoutConstraint(item:self.contentView,
+            attribute:NSLayoutAttribute.Right,
+            relatedBy:NSLayoutRelation.init(rawValue: 0)!,
+            toItem:self.view,
+            attribute: NSLayoutAttribute.Right,
+            multiplier:1.0,
+            constant:0
+        );
+        
+        self.view.addConstraint(rightConstraint);
         
         
 
