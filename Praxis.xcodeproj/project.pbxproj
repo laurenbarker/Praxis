@@ -14,6 +14,8 @@
 		0134FF911BD5D9A2002E1215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0134FF8F1BD5D9A2002E1215 /* LaunchScreen.storyboard */; };
 		0134FF9C1BD5D9A2002E1215 /* PraxisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FF9B1BD5D9A2002E1215 /* PraxisTests.swift */; };
 		0134FFA71BD5D9A2002E1215 /* PraxisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFA61BD5D9A2002E1215 /* PraxisUITests.swift */; };
+		0134FFB71BD5E2B0002E1215 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFB61BD5E2B0002E1215 /* Dashboard.swift */; settings = {ASSET_TAGS = (); }; };
+		0134FFB91BD7438F002E1215 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFB81BD7438F002E1215 /* Goal.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		0134FFA21BD5D9A2002E1215 /* PraxisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PraxisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0134FFA61BD5D9A2002E1215 /* PraxisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisUITests.swift; sourceTree = "<group>"; };
 		0134FFA81BD5D9A2002E1215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0134FFB61BD5E2B0002E1215 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		0134FFB81BD7438F002E1215 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 			children = (
 				0134FF861BD5D9A2002E1215 /* AppDelegate.swift */,
 				0134FF881BD5D9A2002E1215 /* ViewController.swift */,
+				0134FFB61BD5E2B0002E1215 /* Dashboard.swift */,
 				0134FF8A1BD5D9A2002E1215 /* Main.storyboard */,
 				0134FF8D1BD5D9A2002E1215 /* Assets.xcassets */,
 				0134FF8F1BD5D9A2002E1215 /* LaunchScreen.storyboard */,
 				0134FF921BD5D9A2002E1215 /* Info.plist */,
+				0134FFB81BD7438F002E1215 /* Goal.swift */,
 			);
 			path = Praxis;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 				TargetAttributes = {
 					0134FF821BD5D9A1002E1215 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = B76ZBJ4J67;
 					};
 					0134FF961BD5D9A2002E1215 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -255,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0134FFB91BD7438F002E1215 /* Goal.swift in Sources */,
 				0134FF891BD5D9A2002E1215 /* ViewController.swift in Sources */,
+				0134FFB71BD5E2B0002E1215 /* Dashboard.swift in Sources */,
 				0134FF871BD5D9A2002E1215 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,10 +407,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Praxis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.Praxis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -409,10 +421,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Praxis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.Praxis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
