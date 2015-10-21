@@ -9,7 +9,7 @@
 import UIKit
 
 class Dashboard: UIViewController {
-    var titleToDisplay = "None"
+    var titleToDisplay = "No goals.\nClick 'Add Goal' to make some!"
     
     @IBOutlet weak var titleView: UILabel!
     
