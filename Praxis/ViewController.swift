@@ -101,7 +101,46 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         
     }
-
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true;
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.resignFirstResponder()
+        super.viewWillDisappear(animated)
+        
+    }
+    
+    override func motionEnded(motion: UIEventSubtype,
+        withEvent event: UIEvent?) {
+            
+            if motion == .MotionShake{
+                
+                ////  Comment: used code below to test shake-motion event.
+                //                let controller = UIAlertController(title: "Shake",
+                //                    message: "The device is shaken",
+                //                    preferredStyle: .Alert)
+                //
+                //                controller.addAction(UIAlertAction(title: "OK",
+                //                    style: .Default,
+                //                    handler: nil))
+                //
+                //                presentViewController(controller, animated: true, completion: nil)
+                //
+                //            }
+                
+                
+                //Comment: to terminate app, do not use exit(0) bc that is logged as a crash.
+                UIControl().sendAction(Selector("suspend"), to: UIApplication.sharedApplication(),
+                    forEvent: nil)
+            }
+    }
 
 }
 

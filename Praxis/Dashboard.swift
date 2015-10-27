@@ -25,5 +25,33 @@ class Dashboard: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func canBecomeFirstResponder() -> Bool {
+        return true;
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.resignFirstResponder()
+        super.viewWillDisappear(animated)
+        
+    }
+    
+    override func motionEnded(motion: UIEventSubtype,
+        withEvent event: UIEvent?) {
+            
+            if motion == .MotionShake{
+                
+                //Comment: to terminate app, do not use exit(0) bc that is logged as a crash.
+                
+                UIControl().sendAction(Selector("suspend"), to: UIApplication.sharedApplication(), forEvent: nil)
+            }
+            
+            
+            
+    }
 
 }
