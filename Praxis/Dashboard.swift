@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class Dashboard: UIViewController {
     var titleToDisplay = "No goals.\nClick 'Add Goal' to make some!"
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     @IBOutlet weak var titleView: UILabel!
     
@@ -18,6 +21,8 @@ class Dashboard: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         titleView.text = titleToDisplay
         print("titleToDisplay: " + titleToDisplay)
+        
+        loadGoal()
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,6 +43,34 @@ class Dashboard: UIViewController {
         self.resignFirstResponder()
         super.viewWillDisappear(animated)
         
+    }
+    
+    // load from memory
+    func loadGoal() -> Int {
+        
+        /* Create the fetch request first */
+        let fetchRequest = NSFetchRequest(entityName: "Goal")
+        
+        /* And execute the fetch request on the context */
+        do{
+            let goals = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Goal]
+            var goalCount = 0
+            for goal in goals{
+                goalCount += 1
+                
+                print("Title = \(goal.title)")
+                print("Goal = \(goal.goal)")
+                print("Unit = \(goal.unit)")
+                print("Increment = \(goal.increment)")
+                print("Interval = \(goal.interval)")
+                
+            }
+            print("Goal count = \(goalCount)")
+            return goalCount
+        } catch let error as NSError{
+            print(error)
+            return 0
+        }
     }
     
     override func motionEnded(motion: UIEventSubtype,
