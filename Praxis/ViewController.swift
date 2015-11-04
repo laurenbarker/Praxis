@@ -8,8 +8,11 @@
 
 import UIKit
 import Foundation
+import CoreData
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     @IBOutlet weak var foreground: UIScrollView!
     @IBOutlet weak var titleField: UITextField!
@@ -23,6 +26,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         foreground.delegate = self
+        
+        self.titleField.delegate = self
+        self.goalField.delegate = self
+        self.unitField.delegate = self
+        self.incrementField.delegate = self
+        self.intervalField.delegate = self
         
         
         let widthConstraint = NSLayoutConstraint(item:self.contentView,
@@ -69,6 +78,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "showTitleSegue") {
+            
+            createNewGoalWithTitle(titleField.text!, goal: Double(goalField.text!)!, unit: unitField.text!, increment: Double(incrementField.text!)!, interval: intervalField.text!)
+            
             if let svc = segue.destinationViewController as? Dashboard {
                 svc.titleToDisplay = titleField.text!
                 
@@ -81,24 +93,34 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.touchesBegan(touches, withEvent: event)
     }
     
-    @IBAction func addGoalAction(sender: UIButton) {
-        // Creating a mutable object to add to the goal
-        let goal = Goal()
+    
+    func createNewGoalWithTitle(title: String,
+        goal :Double,
+        unit: String,
+        increment: Double,
+        interval: String) -> Bool{
+            
+            let newGoal =
+            NSEntityDescription.insertNewObjectForEntityForName("Goal",
+                inManagedObjectContext: managedObjectContext) as! Praxis.Goal
+            
+            (newGoal.title, newGoal.goal, newGoal.unit, newGoal.increment, newGoal.interval) =
+                (title, goal, unit, increment, interval)
+            
+            do{
+                try managedObjectContext.save()
+            } catch let error as NSError{
+                print("Failed to save the new goal. Error = \(error)")
+            }
+            print("Saved")
+            
+            return false
+            
+    }
+    
+    @IBAction func addGoalAction(sender: AnyObject!) {
         
-        goal.EXTRA_TITLE = titleField.text!
-        goal.GOAL_TEXT = goalField.text!
-        goal.EXTRA_UNIT = unitField.text!
-        goal.EXTRA_INCREMENT = (incrementField.text! as NSString).doubleValue
-        goal.EXTRA_INTERVAL = intervalField.text!
-        
-        
-        // Saving the newly created goal
-//        let store = CNContactStore()
-//        let saveRequest = CNSaveRequest()
-//        saveRequest.addContact(goal, toContainerWithIdentifier:nil)
-//        try! store.executeSaveRequest(saveRequest)
-        
-        
+        createNewGoalWithTitle(titleField.text!, goal: Double(goalField.text!)!, unit: unitField.text!, increment: Double(incrementField.text!)!, interval: intervalField.text!)
         
     }
     
