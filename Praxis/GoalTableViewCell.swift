@@ -10,6 +10,11 @@ import UIKit
 
 class GoalTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var goalDisplay: UITextField!
+    @IBOutlet weak var unitDisplay: UITextField!
+    @IBOutlet weak var incrementController: UIStepper!
+    @IBOutlet weak var titleDisplay: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

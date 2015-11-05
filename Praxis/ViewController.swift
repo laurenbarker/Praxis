@@ -81,8 +81,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
             
             createNewGoalWithTitle(titleField.text!, goal: Double(goalField.text!)!, unit: unitField.text!, increment: Double(incrementField.text!)!, interval: intervalField.text!)
             
-            if let svc = segue.destinationViewController as? Dashboard {
-                svc.titleToDisplay = titleField.text!
+            if let svc = segue.destinationViewController as? GoalTableViewController {
+                //svc.titleToDisplay = titleField.text!
                 
             }
         }

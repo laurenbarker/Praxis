@@ -6,6 +6,9 @@
         <attribute name="interval" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
+        <userInfo>
+            <entry key="goal" value="value"/>
+        </userInfo>
     </entity>
     <elements>
         <element name="Goal" positionX="-63" positionY="-18" width="128" height="120"/>

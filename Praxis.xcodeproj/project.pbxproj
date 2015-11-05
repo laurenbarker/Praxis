@@ -14,10 +14,10 @@
 		0134FF911BD5D9A2002E1215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0134FF8F1BD5D9A2002E1215 /* LaunchScreen.storyboard */; };
 		0134FF9C1BD5D9A2002E1215 /* PraxisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FF9B1BD5D9A2002E1215 /* PraxisTests.swift */; };
 		0134FFA71BD5D9A2002E1215 /* PraxisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFA61BD5D9A2002E1215 /* PraxisUITests.swift */; };
-		0134FFB71BD5E2B0002E1215 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFB61BD5E2B0002E1215 /* Dashboard.swift */; settings = {ASSET_TAGS = (); }; };
 		0134FFB91BD7438F002E1215 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFB81BD7438F002E1215 /* Goal.swift */; settings = {ASSET_TAGS = (); }; };
 		0134FFBC1BEA81F2002E1215 /* Goal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFBA1BEA81F1002E1215 /* Goal.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		0134FFBE1BEAA7C9002E1215 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFBD1BEAA7C9002E1215 /* GoalTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		0134FFC01BEABB5E002E1215 /* GoalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFBF1BEABB5E002E1215 /* GoalTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +51,10 @@
 		0134FFA21BD5D9A2002E1215 /* PraxisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PraxisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0134FFA61BD5D9A2002E1215 /* PraxisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisUITests.swift; sourceTree = "<group>"; };
 		0134FFA81BD5D9A2002E1215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0134FFB61BD5E2B0002E1215 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		0134FFB81BD7438F002E1215 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		0134FFBB1BEA81F1002E1215 /* Goal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Goal.xcdatamodel; sourceTree = "<group>"; };
 		0134FFBD1BEAA7C9002E1215 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		0134FFBF1BEABB5E002E1215 /* GoalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			children = (
 				0134FF861BD5D9A2002E1215 /* AppDelegate.swift */,
 				0134FF881BD5D9A2002E1215 /* ViewController.swift */,
-				0134FFB61BD5E2B0002E1215 /* Dashboard.swift */,
+				0134FFBF1BEABB5E002E1215 /* GoalTableViewController.swift */,
 				0134FF8A1BD5D9A2002E1215 /* Main.storyboard */,
 				0134FFBD1BEAA7C9002E1215 /* GoalTableViewCell.swift */,
 				0134FF8D1BD5D9A2002E1215 /* Assets.xcassets */,
@@ -271,9 +271,9 @@
 				0134FFB91BD7438F002E1215 /* Goal.swift in Sources */,
 				0134FF891BD5D9A2002E1215 /* ViewController.swift in Sources */,
 				0134FFBC1BEA81F2002E1215 /* Goal.xcdatamodeld in Sources */,
-				0134FFB71BD5E2B0002E1215 /* Dashboard.swift in Sources */,
 				0134FFBE1BEAA7C9002E1215 /* GoalTableViewCell.swift in Sources */,
 				0134FF871BD5D9A2002E1215 /* AppDelegate.swift in Sources */,
+				0134FFC01BEABB5E002E1215 /* GoalTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -163,70 +163,97 @@
             </objects>
             <point key="canvasLocation" x="1105" y="5"/>
         </scene>
-        <!--Dashboard-->
+        <!--Goal Table View Controller-->
         <scene sceneID="tHc-NJ-QtD">
             <objects>
-                <viewController id="eik-yL-bVR" customClass="Dashboard" customModule="Praxis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eik-yL-bVR" customClass="GoalTableViewController" customModule="Praxis" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xlo-Gg-9iO"/>
                         <viewControllerLayoutGuide type="bottom" id="jUu-Xa-uBb"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="b3o-8C-UYt">
+                    <view key="view" contentMode="scaleToFill" id="b3o-8C-UYt" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1y-6f-ie1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1y-6f-ie1">
                                 <rect key="frame" x="20" y="20" width="63" height="30"/>
                                 <state key="normal" title="Add Goal"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="WGc-AO-NYX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyJ-BY-agY">
-                                <rect key="frame" x="27" y="58" width="297" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PmR-0G-25n">
-                                <rect key="frame" x="0.0" y="124" width="600" height="476"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PmR-0G-25n">
+                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GoalTableViewCell" rowHeight="90" id="LV7-j2-4uU" customClass="GoalTableViewCell" customModule="Praxis" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GoalTableViewCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GoalTableViewCell" rowHeight="90" id="LV7-j2-4uU" customClass="GoalTableViewCell" customModule="Praxis" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LV7-j2-4uU" id="uRV-Mb-C9F">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="incrementer" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qLP-bI-Q1L">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" restorationIdentifier="incrementer" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qLP-bI-Q1L">
                                                     <rect key="frame" x="243" y="32" width="94" height="29"/>
                                                 </stepper>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="goalBox" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVG-ni-d0i">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="goalBox" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVG-ni-d0i">
                                                     <rect key="frame" x="38" y="30" width="97" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="97" id="9ND-O0-GNG"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="titleBox" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sba-ec-3B9">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="titleBox" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sba-ec-3B9">
                                                     <rect key="frame" x="444" y="31" width="97" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="97" id="ucU-pR-3Vb"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="unitBox" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CoV-3O-Z3n">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="unitBox" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CoV-3O-Z3n">
                                                     <rect key="frame" x="138" y="31" width="97" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="97" id="ifP-s7-Emc"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CoV-3O-Z3n" firstAttribute="top" secondItem="uRV-Mb-C9F" secondAttribute="topMargin" constant="23" id="4Q9-xW-AaD"/>
+                                                <constraint firstItem="CoV-3O-Z3n" firstAttribute="bottom" secondItem="qLP-bI-Q1L" secondAttribute="bottom" id="NEm-fw-u5O"/>
+                                                <constraint firstItem="CoV-3O-Z3n" firstAttribute="baseline" secondItem="sba-ec-3B9" secondAttribute="baseline" id="PRO-mr-Nv4"/>
+                                                <constraint firstItem="fVG-ni-d0i" firstAttribute="leading" secondItem="uRV-Mb-C9F" secondAttribute="leadingMargin" constant="30" id="Rp6-sM-4Kg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sba-ec-3B9" secondAttribute="trailing" constant="51" id="YEe-QD-F1c"/>
+                                                <constraint firstItem="qLP-bI-Q1L" firstAttribute="leading" secondItem="CoV-3O-Z3n" secondAttribute="trailing" constant="8" symbolic="YES" id="cxK-8q-Xno"/>
+                                                <constraint firstItem="CoV-3O-Z3n" firstAttribute="leading" secondItem="fVG-ni-d0i" secondAttribute="trailing" constant="3" id="nF5-BX-5jH"/>
+                                                <constraint firstItem="fVG-ni-d0i" firstAttribute="centerY" secondItem="uRV-Mb-C9F" secondAttribute="centerY" id="qf8-Kj-FkG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="goalDisplay" destination="fVG-ni-d0i" id="YYe-Xm-vMh"/>
+                                            <outlet property="incrementController" destination="qLP-bI-Q1L" id="hq7-Vh-IeA"/>
+                                            <outlet property="titleDisplay" destination="sba-ec-3B9" id="9tY-M7-7uu"/>
+                                            <outlet property="unitDisplay" destination="CoV-3O-Z3n" id="CYF-rD-XTT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PmR-0G-25n" firstAttribute="top" secondItem="V1y-6f-ie1" secondAttribute="bottom" constant="8" symbolic="YES" id="SDv-NB-mRc"/>
+                            <constraint firstItem="PmR-0G-25n" firstAttribute="leading" secondItem="b3o-8C-UYt" secondAttribute="leading" id="brO-WB-ReM"/>
+                            <constraint firstItem="V1y-6f-ie1" firstAttribute="top" secondItem="xlo-Gg-9iO" secondAttribute="bottom" id="hQs-cb-sOb"/>
+                            <constraint firstItem="V1y-6f-ie1" firstAttribute="leading" secondItem="b3o-8C-UYt" secondAttribute="leadingMargin" id="hnO-Qy-IAQ"/>
+                            <constraint firstItem="PmR-0G-25n" firstAttribute="bottom" secondItem="jUu-Xa-uBb" secondAttribute="top" id="jTQ-0l-CfH"/>
+                            <constraint firstAttribute="trailing" secondItem="PmR-0G-25n" secondAttribute="trailing" id="p6u-2G-CpJ"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="titleView" destination="XyJ-BY-agY" id="KkH-BP-MQu"/>
+                        <outlet property="goalTableView" destination="PmR-0G-25n" id="BAJ-jy-iGH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpM-sz-gj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
