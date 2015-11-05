@@ -19,10 +19,13 @@ class Dashboard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        loadGoal()
+        
+        
         titleView.text = titleToDisplay
         print("titleToDisplay: " + titleToDisplay)
         
-        loadGoal()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,6 +66,8 @@ class Dashboard: UIViewController {
                 print("Unit = \(goal.unit)")
                 print("Increment = \(goal.increment)")
                 print("Interval = \(goal.interval)")
+                
+                titleToDisplay = goal.title + " " + String(goal.goal) + " " + goal.unit + " " + String(goal.increment) + " " + goal.interval + "\n"
                 
             }
             print("Goal count = \(goalCount)")
