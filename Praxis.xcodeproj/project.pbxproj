@@ -204,7 +204,7 @@
 				TargetAttributes = {
 					0134FF821BD5D9A1002E1215 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = B76ZBJ4J67;
+						DevelopmentTeam = NQ2VT6586N;
 					};
 					0134FF961BD5D9A2002E1215 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -419,7 +419,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Praxis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.Praxis;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.PraxisR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -433,7 +433,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Praxis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.Praxis;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.PraxisR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -506,6 +506,7 @@
 				0134FFAD1BD5D9A2002E1215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0134FFAE1BD5D9A2002E1215 /* Build configuration list for PBXNativeTarget "PraxisTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +515,7 @@
 				0134FFB01BD5D9A2002E1215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0134FFB11BD5D9A2002E1215 /* Build configuration list for PBXNativeTarget "PraxisUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +524,7 @@
 				0134FFB31BD5D9A2002E1215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

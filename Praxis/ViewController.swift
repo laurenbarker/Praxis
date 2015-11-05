@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import CoreData
 
+
 class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -55,7 +56,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
         );
         
         self.view.addConstraint(leftConstraint);
-
+        
         let rightConstraint = NSLayoutConstraint(item:self.contentView,
             attribute:NSLayoutAttribute.Right,
             relatedBy:NSLayoutRelation.init(rawValue: 0)!,
@@ -68,9 +69,9 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
         self.view.addConstraint(rightConstraint);
         
         
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -163,6 +164,5 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
                     forEvent: nil)
             }
     }
-
+    
 }
-
