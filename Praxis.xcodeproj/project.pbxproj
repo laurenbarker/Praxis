@@ -14,8 +14,8 @@
 		0134FF911BD5D9A2002E1215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0134FF8F1BD5D9A2002E1215 /* LaunchScreen.storyboard */; };
 		0134FF9C1BD5D9A2002E1215 /* PraxisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FF9B1BD5D9A2002E1215 /* PraxisTests.swift */; };
 		0134FFA71BD5D9A2002E1215 /* PraxisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFA61BD5D9A2002E1215 /* PraxisUITests.swift */; };
-		0134FFB71BD5E2B0002E1215 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFB61BD5E2B0002E1215 /* Dashboard.swift */; settings = {ASSET_TAGS = (); }; };
-		0134FFB91BD7438F002E1215 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFB81BD7438F002E1215 /* Goal.swift */; settings = {ASSET_TAGS = (); }; };
+		0134FFB71BD5E2B0002E1215 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFB61BD5E2B0002E1215 /* Dashboard.swift */; };
+		0134FFB91BD7438F002E1215 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0134FFB81BD7438F002E1215 /* Goal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,7 +198,7 @@
 				TargetAttributes = {
 					0134FF821BD5D9A1002E1215 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = B76ZBJ4J67;
+						DevelopmentTeam = NQ2VT6586N;
 					};
 					0134FF961BD5D9A2002E1215 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -411,7 +411,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Praxis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.Praxis;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.PraxisR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -425,7 +425,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Praxis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.Praxis;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.cs.cs4720.PraxisR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -498,6 +498,7 @@
 				0134FFAD1BD5D9A2002E1215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0134FFAE1BD5D9A2002E1215 /* Build configuration list for PBXNativeTarget "PraxisTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +507,7 @@
 				0134FFB01BD5D9A2002E1215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0134FFB11BD5D9A2002E1215 /* Build configuration list for PBXNativeTarget "PraxisUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +516,7 @@
 				0134FFB31BD5D9A2002E1215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

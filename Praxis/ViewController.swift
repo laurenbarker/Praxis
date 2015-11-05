@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 class ViewController: UIViewController, UIScrollViewDelegate {
-
+    
     @IBOutlet weak var foreground: UIScrollView!
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var goalField: UITextField!
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         );
         
         self.view.addConstraint(leftConstraint);
-
+        
         let rightConstraint = NSLayoutConstraint(item:self.contentView,
             attribute:NSLayoutAttribute.Right,
             relatedBy:NSLayoutRelation.init(rawValue: 0)!,
@@ -59,9 +59,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.view.addConstraint(rightConstraint);
         
         
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -93,10 +93,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         
         // Saving the newly created goal
-//        let store = CNContactStore()
-//        let saveRequest = CNSaveRequest()
-//        saveRequest.addContact(goal, toContainerWithIdentifier:nil)
-//        try! store.executeSaveRequest(saveRequest)
+        //        let store = CNContactStore()
+        //        let saveRequest = CNSaveRequest()
+        //        saveRequest.addContact(goal, toContainerWithIdentifier:nil)
+        //        try! store.executeSaveRequest(saveRequest)
         
         
         
@@ -141,6 +141,5 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                     forEvent: nil)
             }
     }
-
+    
 }
-
